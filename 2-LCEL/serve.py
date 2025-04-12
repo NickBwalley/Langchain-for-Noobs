@@ -3,12 +3,12 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_groq import ChatGroq
 import os
-from langserve import add_routes
+from langserve import add_routes ## this is a custom function to add routes to the FastAPI app
 from dotenv import load_dotenv
 load_dotenv()
 
 groq_api_key=os.getenv("GROQ_API_KEY")
-model=ChatGroq(model="Gemma2-9b-It",groq_api_key=groq_api_key)
+model=ChatGroq(model="qwen-2.5-32b",groq_api_key=groq_api_key)
 
 # 1. Create prompt template
 system_template = "Translate the following into {language}:"
