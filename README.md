@@ -43,3 +43,7 @@ pip list | findstr "name_of_package"
 ```
 conda activate venv
 ```
+
+### LLM FAQs
+
+![one-shot-prompting-explained](assets/one-shot-prompting-explained.png)
